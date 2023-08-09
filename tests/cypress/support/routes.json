@@ -1,4 +1,53 @@
 {
+  "debugbar.openhandler": {
+    "name": "debugbar.openhandler",
+    "domain": null,
+    "action": "Barryvdh\\Debugbar\\Controllers\\OpenHandlerController@handle",
+    "uri": "_debugbar/open",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "debugbar.clockwork": {
+    "name": "debugbar.clockwork",
+    "domain": null,
+    "action": "Barryvdh\\Debugbar\\Controllers\\OpenHandlerController@clockwork",
+    "uri": "_debugbar/clockwork/{id}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "debugbar.assets.css": {
+    "name": "debugbar.assets.css",
+    "domain": null,
+    "action": "Barryvdh\\Debugbar\\Controllers\\AssetController@css",
+    "uri": "_debugbar/assets/stylesheets",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "debugbar.assets.js": {
+    "name": "debugbar.assets.js",
+    "domain": null,
+    "action": "Barryvdh\\Debugbar\\Controllers\\AssetController@js",
+    "uri": "_debugbar/assets/javascript",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "debugbar.cache.delete": {
+    "name": "debugbar.cache.delete",
+    "domain": null,
+    "action": "Barryvdh\\Debugbar\\Controllers\\CacheController@delete",
+    "uri": "_debugbar/cache/{key}/{tags?}",
+    "method": [
+      "DELETE"
+    ]
+  },
   "cypress.factory": {
     "name": "cypress.factory",
     "domain": null,
@@ -82,6 +131,52 @@
       "HEAD"
     ]
   },
+  "livewire.message": {
+    "name": "livewire.message",
+    "domain": null,
+    "action": "Livewire\\Controllers\\HttpConnectionHandler",
+    "uri": "livewire/message/{name}",
+    "method": [
+      "POST"
+    ]
+  },
+  "livewire.message-localized": {
+    "name": "livewire.message-localized",
+    "domain": null,
+    "action": "Livewire\\Controllers\\HttpConnectionHandler",
+    "uri": "{locale}/livewire/message/{name}",
+    "method": [
+      "POST"
+    ]
+  },
+  "livewire.upload-file": {
+    "name": "livewire.upload-file",
+    "domain": null,
+    "action": "Livewire\\Controllers\\FileUploadHandler@handle",
+    "uri": "livewire/upload-file",
+    "method": [
+      "POST"
+    ]
+  },
+  "livewire.preview-file": {
+    "name": "livewire.preview-file",
+    "domain": null,
+    "action": "Livewire\\Controllers\\FilePreviewHandler@handle",
+    "uri": "livewire/preview-file/{filename}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "": {
+    "name": null,
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ConfirmablePasswordController@store",
+    "uri": "confirm-password",
+    "method": [
+      "POST"
+    ]
+  },
   "ignition.healthCheck": {
     "name": "ignition.healthCheck",
     "domain": null,
@@ -106,15 +201,6 @@
     "domain": null,
     "action": "Spatie\\LaravelIgnition\\Http\\Controllers\\UpdateConfigController",
     "uri": "_ignition/update-config",
-    "method": [
-      "POST"
-    ]
-  },
-  "": {
-    "name": null,
-    "domain": null,
-    "action": "App\\Http\\Controllers\\Auth\\ConfirmablePasswordController@store",
-    "uri": "confirm-password",
     "method": [
       "POST"
     ]
@@ -270,6 +356,36 @@
     "uri": "logout",
     "method": [
       "POST"
+    ]
+  },
+  "scribe": {
+    "name": "scribe",
+    "domain": null,
+    "action": "\\Illuminate\\Routing\\ViewController",
+    "uri": "docs",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "scribe.postman": {
+    "name": "scribe.postman",
+    "domain": null,
+    "action": "Closure",
+    "uri": "docs.postman",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "scribe.openapi": {
+    "name": "scribe.openapi",
+    "domain": null,
+    "action": "Closure",
+    "uri": "docs.openapi",
+    "method": [
+      "GET",
+      "HEAD"
     ]
   }
 }

@@ -1,7 +1,7 @@
 import swapEnv from "./swap-env";
 
-const pluginConfig: Cypress.PluginConfig = (on, config) => {
+export const plugins: Cypress.PluginConfig = (on, config) => {
     on('task', swapEnv);
 }
 
-export default pluginConfig;
+export default plugins;

@@ -1,6 +1,6 @@
 import { defineConfig } from 'cypress'
 
-import plugins from './tests/cypress/plugins';
+import {plugins} from './tests/cypress/plugins';
 
 export default defineConfig({
     chromeWebSecurity: false,

@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var fs = require("fs");
-exports.default = {
+import * as fs from 'fs';
+export default {
     activateCypressEnvFile: function () {
         if (fs.existsSync('.env.cypress')) {
             fs.renameSync('.env', '.env.backup');
