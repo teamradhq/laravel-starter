@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,25 @@ Route::middleware('auth')->prefix('/profile')->group(static function (): void {
 });
 
 require __DIR__ . '/auth.php';
+
+if (config('app.env') !== 'local') {
+    return;
+}
+
+// Scribe API Documentation
+$prefix = config('scribe.laravel.docs_url', '/docs');
+$middleware = config('scribe.laravel.middleware', []);
+
+Route::middleware($middleware)->group(function () use ($prefix): void {
+    Route::view($prefix, 'scribe.index')->name('scribe');
+
+    Route::get(
+        "{$prefix}.postman",
+        static fn () => new JsonResponse(Storage::disk('local')->get('scribe/collection.json'), json: true),
+    )->name('scribe.postman');
+
+    Route::get(
+        "{$prefix}.openapi",
+        static fn () => response()->file(Storage::disk('local')->path('scribe/openapi.yaml'))
+    )->name('scribe.openapi');
+});

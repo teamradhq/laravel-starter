@@ -17,3 +17,11 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# API Docs
+.scribe
+public/vendor
+resources/views/scribe
+
+# Debugbar
+storage/debugbar
