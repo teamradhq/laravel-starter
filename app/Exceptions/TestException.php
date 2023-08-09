@@ -11,5 +11,4 @@ use Exception;
  */
 class TestException extends Exception
 {
-    //
 }

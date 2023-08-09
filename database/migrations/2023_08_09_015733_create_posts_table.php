@@ -9,7 +9,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('posts', static function (Blueprint $table) {
+        Schema::create('posts', static function (Blueprint $table): void {
             $table->id();
             $table->foreignIdFor(User::class)->default(1);
             $table->string('title');
@@ -23,7 +23,7 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::table('posts', static function (Blueprint $table) {
+        Schema::table('posts', static function (Blueprint $table): void {
             $table->dropForeignIdFor(User::class);
         });
 

@@ -1,5 +1,5 @@
 name: PHP Coding Style
-on: pull_request
+on: push
 jobs:
   phplint:
     runs-on: ubuntu-latest
@@ -11,5 +11,5 @@ jobs:
           preset: laravel
           verboseMode: true
           testMode: true
-          configPath: "pint.json"
+          configPath: "./pint.json"
           pintVersion: 1.10.6

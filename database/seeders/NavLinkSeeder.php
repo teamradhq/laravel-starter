@@ -19,7 +19,7 @@ class NavLinkSeeder extends Seeder
         collect($links)->each(static function (array $link, int $index): void {
             $navLink = new NavLink([
                 ...$link,
-//                'order' => $index + 1,
+                //                'order' => $index + 1,
             ]);
 
             $navLink->save();

@@ -4,13 +4,13 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Database\Factories\UserFactory;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 
 class UserSeeder extends Seeder
 {
     protected UserFactory $factory;
+
     /**
      * Run the database seeds.
      */
