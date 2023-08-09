@@ -11,7 +11,8 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     Nice to see you here!
 
-                    <livewire:counter />
+                    <livewire:counter/>
+                    <x-alpine-counter />
                 </div>
             </div>
         </div>
