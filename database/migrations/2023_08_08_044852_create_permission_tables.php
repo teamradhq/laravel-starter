@@ -160,6 +160,9 @@ class CreatePermissionTables extends Migration
         Schema::drop($tableNames['permissions']);
     }
 
+    /**
+     * @throws ApplicationException
+     */
     private function guard($tableNames, $columnNames, $teams): void
     {
         if (empty($tableNames)) {

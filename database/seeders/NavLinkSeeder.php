@@ -16,7 +16,7 @@ class NavLinkSeeder extends Seeder
             ['title' => 'Login', 'route_name' => 'login', 'is_guest_link_only' => true],
         ];
 
-        collect($links)->each(static function (array $link, int $index): void {
+        collect($links)->each(static function (array $link): void {
             $navLink = new NavLink([
                 ...$link,
                 //                'order' => $index + 1,

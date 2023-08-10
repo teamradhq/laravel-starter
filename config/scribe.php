@@ -1,6 +1,7 @@
 <?php
 
 use Knuckles\Scribe\Extracting\Strategies;
+use Knuckles\Scribe\Matching\RouteMatcher;
 
 return [
 
@@ -171,7 +172,7 @@ INTRO
         'serializer' => null,
     ],
 
-    'routeMatcher' => \Knuckles\Scribe\Matching\RouteMatcher::class,
+    'routeMatcher' => RouteMatcher::class,
 
     'database_connections_to_transact' => [config('database.default')],
 ];
