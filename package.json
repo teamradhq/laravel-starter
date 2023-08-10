@@ -19,6 +19,8 @@
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint . -c .eslintrc.cjs --ext .ts,.js",
-        "lint:fix": "eslint . -c .eslintrc.cjs --ext .ts,.js --fix"
+        "lint:fix": "eslint . -c .eslintrc.cjs --ext .ts,.js --fix",
+        "cypress:open": " npx cypress open --config-file cypress.config.ts",
+        "cypress:ci": " npx cypress run --config-file cypress.config.ts --headless --browser chrome"
     }
 }

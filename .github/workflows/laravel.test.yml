@@ -52,7 +52,8 @@ jobs:
       - name: Laravel Pint Coding Style
         run: composer pint:fix -- --test
 
-  code-style-and-tests:
+  tests:
+    name: PHP and Cypress Tests
     runs-on: ubuntu-latest
     needs:
       - front-end
@@ -97,3 +98,8 @@ jobs:
           DB_CONNECTION: sqlite_testing
           DB_DATABASE: database/database.sqlite
         run: php artisan test
+
+      - name: Run Cypress Tests
+        env:
+          CYPRESS_BASE_URL: http://0.0.0.0
+        run: npm ci && npm run cypress:ci
