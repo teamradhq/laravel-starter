@@ -3,12 +3,29 @@ name: Code Style and Tests
 on: push
 
 jobs:
-  code-style-and-tests:
-
+  eslint:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Front End Dependencies
+        run: npm ci
+
+      - name: ESLint JavaScript Coding Style
+        run: npm run lint
+
+  code-style-and-tests:
+    runs-on: ubuntu-latest
+    needs:
+      - eslint
+    steps:
+      - uses: actions/checkout@v3
+
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
@@ -35,8 +52,11 @@ jobs:
           mkdir -p database
           touch database/database.sqlite
 
+      - name: Install Front End Dependencies
+        run: npm ci
+
       - name: Build Front End Assets
-        run: npm ci && npm run build
+        run: npm run build
 
       - name: Execute tests (Unit and Feature tests) via PHPUnit & Pest
         env:
