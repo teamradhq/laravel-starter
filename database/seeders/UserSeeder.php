@@ -28,8 +28,10 @@ class UserSeeder extends Seeder
         ])->roles()->attach(Role::where('name', 'admin')->first());
 
         $role = Role::where('name', 'user')->first();
-        $this->factory->count(10)
-            ->create()
-            ->each(static fn ($user) => $user->roles()->attach($role));
+
+        collect([
+            $this->factory->createOne(['email' => 'user@test.com']),
+            ...$this->factory->count(9)->create(),
+        ])->each(static fn ($user) => $user->roles()->attach($role));
     }
 }

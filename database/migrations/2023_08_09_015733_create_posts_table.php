@@ -23,10 +23,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::table('posts', static function (Blueprint $table): void {
-            $table->dropForeignIdFor(User::class);
-        });
-
         Schema::dropIfExists('posts');
     }
 };
