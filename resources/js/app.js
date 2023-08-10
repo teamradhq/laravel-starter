@@ -1,4 +1,4 @@
-/// <reference path="./global.d.ts" />
+import './global.d.ts';
 import './bootstrap';
 import Alpine from 'alpinejs';
 window.Alpine = Alpine;
