@@ -21,8 +21,8 @@
 
     <!-- Page Heading -->
     @if (isset($header))
-        <header class="bg-white dark:bg-gray-800 shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <header class="bg-white dark:bg-neutral-800 shadow h-20 max-h-20 p-0">
+            <div class="max-w-7xl h-full mx-auto my-0 py-0 px-8 flex items center">
                 {{ $header }}
             </div>
         </header>
