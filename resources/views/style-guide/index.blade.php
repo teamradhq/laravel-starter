@@ -1,10 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            Welcome!
+            Style Guide
         </h2>
     </x-slot>
-    Nice to see you here!
-    <livewire:counter />
-    <x-alpine-counter />
+
+    This is the style guide!
+    @include('style-guide.icons')
 </x-app-layout>

@@ -33,6 +33,8 @@ if (config('app.env') !== 'local') {
     return;
 }
 
+Route::get('/style-guide', static fn () => view('style-guide.index'))->name('style-guide');
+
 // Scribe API Documentation
 $prefix = config('scribe.laravel.docs_url', '/docs');
 $middleware = config('scribe.laravel.middleware', []);
