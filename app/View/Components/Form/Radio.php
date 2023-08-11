@@ -18,7 +18,7 @@ class Radio extends Component
         public bool $checked = false,
         public bool $disabled = false,
     ) {
-        $this->id = "$this->name[$this->order]";
+        $this->id = "{$this->name}[{$this->order}]";
     }
 
     public function render(): View|Closure|string

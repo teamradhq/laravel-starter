@@ -11,6 +11,7 @@ use Illuminate\View\Component;
 class Heading extends Component
 {
     public string $tag;
+
     public string $classList;
 
     /**

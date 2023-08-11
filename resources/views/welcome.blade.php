@@ -1,10 +1,12 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+    <x-slot:header>
+        <x-ui.heading level="1">
             Welcome!
-        </h2>
-    </x-slot>
+        </x-ui.heading>
+    </x-slot:header>
+
     Nice to see you here!
+
     <livewire:counter />
     <x-alpine-counter />
 </x-app-layout>

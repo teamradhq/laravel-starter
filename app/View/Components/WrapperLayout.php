@@ -10,7 +10,6 @@ use Illuminate\View\Component;
 
 class WrapperLayout extends Component
 {
-
     /**
      * Get the view / contents that represents the component.
      */
