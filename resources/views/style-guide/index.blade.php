@@ -5,6 +5,8 @@
         </x-ui.heading>
     </x-slot:header>
 
+    @include('style-guide.headings')
     @include('style-guide.icons')
     @include('style-guide.colors')
+    @include('style-guide.boxes')
 </x-app-layout>
