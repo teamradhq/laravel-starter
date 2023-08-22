@@ -1,13 +1,20 @@
 describe('Authentication', () => {
-  it('logs a user in', () => {
-    cy.visit('/login');
+  const testCases: [string, string, string][] = [
+    ['logs a valid user in', 'admin@test.com', '/dashboard'],
+    ['does not log invalid user in', 'invalid@test.com', '/login'],
+  ];
 
-    cy.get('input[name="email"]').type('admin@test.com');
-    cy.get('input[name="password"]').type('password');
-    cy.get('#login-button').click();
+  for (const [description, email, path] of testCases) {
+    it(description, () => {
+      cy.visit('/login');
 
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq('/dashboard');
+      cy.get('input[name="email"]').type(email);
+      cy.get('input[name="password"]').type('password');
+      cy.get('#login-button').click();
+
+      cy.location().should((location) => {
+        expect(location.pathname).to.eq(path);
+      });
     });
-  });
+  }
 });
