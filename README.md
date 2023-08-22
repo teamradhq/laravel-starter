@@ -2,7 +2,7 @@
 
 This is a starter project to use for Laravel 10.x projects. 
 
-It includes the following:
+It includes the following packages:
 
 - *Laravel*
   - [Laravel Sail](https://laravel.com/docs/10.x/sail)

@@ -177,6 +177,130 @@
       "POST"
     ]
   },
+  "log-viewer.hosts": {
+    "name": "log-viewer.hosts",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\HostsController@index",
+    "uri": "admin/log-viewer/api/hosts",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "log-viewer.folders": {
+    "name": "log-viewer.folders",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\FoldersController@index",
+    "uri": "admin/log-viewer/api/folders",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "log-viewer.folders.download": {
+    "name": "log-viewer.folders.download",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\FoldersController@download",
+    "uri": "admin/log-viewer/api/folders/{folderIdentifier}/download",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "log-viewer.folders.clear-cache": {
+    "name": "log-viewer.folders.clear-cache",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\FoldersController@clearCache",
+    "uri": "admin/log-viewer/api/folders/{folderIdentifier}/clear-cache",
+    "method": [
+      "POST"
+    ]
+  },
+  "log-viewer.folders.delete": {
+    "name": "log-viewer.folders.delete",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\FoldersController@delete",
+    "uri": "admin/log-viewer/api/folders/{folderIdentifier}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "log-viewer.files": {
+    "name": "log-viewer.files",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\FilesController@index",
+    "uri": "admin/log-viewer/api/files",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "log-viewer.files.download": {
+    "name": "log-viewer.files.download",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\FilesController@download",
+    "uri": "admin/log-viewer/api/files/{fileIdentifier}/download",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "log-viewer.files.clear-cache": {
+    "name": "log-viewer.files.clear-cache",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\FilesController@clearCache",
+    "uri": "admin/log-viewer/api/files/{fileIdentifier}/clear-cache",
+    "method": [
+      "POST"
+    ]
+  },
+  "log-viewer.files.delete": {
+    "name": "log-viewer.files.delete",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\FilesController@delete",
+    "uri": "admin/log-viewer/api/files/{fileIdentifier}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "log-viewer.files.clear-cache-all": {
+    "name": "log-viewer.files.clear-cache-all",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\FilesController@clearCacheAll",
+    "uri": "admin/log-viewer/api/clear-cache-all",
+    "method": [
+      "POST"
+    ]
+  },
+  "log-viewer.files.delete-multiple-files": {
+    "name": "log-viewer.files.delete-multiple-files",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\FilesController@deleteMultipleFiles",
+    "uri": "admin/log-viewer/api/delete-multiple-files",
+    "method": [
+      "POST"
+    ]
+  },
+  "log-viewer.logs": {
+    "name": "log-viewer.logs",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\LogsController@index",
+    "uri": "admin/log-viewer/api/logs",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "log-viewer.index": {
+    "name": "log-viewer.index",
+    "domain": null,
+    "action": "Opcodes\\LogViewer\\Http\\Controllers\\IndexController",
+    "uri": "admin/log-viewer/{view?}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
   "ignition.healthCheck": {
     "name": "ignition.healthCheck",
     "domain": null,
@@ -241,6 +365,16 @@
     "uri": "profile",
     "method": [
       "DELETE"
+    ]
+  },
+  "admin.index": {
+    "name": "admin.index",
+    "domain": null,
+    "action": "Closure",
+    "uri": "admin",
+    "method": [
+      "GET",
+      "HEAD"
     ]
   },
   "register": {
@@ -356,6 +490,16 @@
     "uri": "logout",
     "method": [
       "POST"
+    ]
+  },
+  "style-guide": {
+    "name": "style-guide",
+    "domain": null,
+    "action": "Closure",
+    "uri": "style-guide",
+    "method": [
+      "GET",
+      "HEAD"
     ]
   },
   "scribe": {

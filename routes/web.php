@@ -27,6 +27,10 @@ Route::middleware('auth')->prefix('/profile')->group(static function (): void {
     Route::delete('/', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::middleware(['auth', 'admin'])->prefix('/admin')->group(static function (): void {
+    Route::get('/', static fn () => view('admin.index'))->name('admin.index');
+});
+
 require __DIR__ . '/auth.php';
 
 if (config('app.env') !== 'local') {
