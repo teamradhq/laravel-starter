@@ -1,6 +1,6 @@
 {
     "name": "teamradhq/laravel-starter",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
     "keywords": [
